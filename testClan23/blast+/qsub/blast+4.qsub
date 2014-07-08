@@ -1,0 +1,15 @@
+#!/bin/bash
+# ----------------QSUB Parameters----------------- #
+#PBS -j oe
+#PBS -S /bin/bash
+#PBS -q default
+#PBS -l nodes=1:ppn=24
+#PBS -l mem=50000mb
+#PBS -N blast+_exp4
+# ----------------Load Modules-------------------- #
+module load blast+
+# ----------------Your Commands------------------- #
+cd ~/testclan23/
+echo `pwd`
+./blast+.pl 4 24
+
